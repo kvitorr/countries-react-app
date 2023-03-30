@@ -1,0 +1,74 @@
+.countryBox {
+    background-color: #ffffff;
+    padding: 1rem;
+    height: 250px;
+    width: 300px;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.countryBox:hover {
+    transform: scale(1.05);
+    z-index: 1; /* opcional, se necessário */
+}
+
+.countryImage {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.countryImage img {
+    width: 100%;
+}
+
+.countryData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.countryPopulation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 150px;
+}
+
+.countryPopulationData {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.countryPopulationName {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.learnMoreBtn {
+    border: 1px solid black;
+    height: 35px;
+    border-radius: 1rem;
+    padding: .5rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.learnMoreBtn:hover {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: .5rem;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+}
