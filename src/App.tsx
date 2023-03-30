@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
-
+import Countries from './components/Countries'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -9,7 +9,6 @@ function App() {
 
 
   useEffect(() => {
-
     if(searchTerm !== '') {
       axios.get(`https://restcountries.com/v3.1/name/${searchTerm}`)
       .then(response => response.data)
@@ -26,8 +25,15 @@ function App() {
 
   return (
   <>
-    find countries <input value={searchTerm} onChange={handleSearchTermOnChange} />
-    
+    <main className='main'>
+      <h2>What country will you explore first?</h2>
+      <div className='searchBox'>
+        <input placeholder='Search here...' className='searchInput' value={searchTerm} onChange={handleSearchTermOnChange} />
+      </div>
+    </main>
+    <div className='countriesFounded'>
+      <Countries listCountries={listCountries}/>
+    </div>
   </>
   )
 }
