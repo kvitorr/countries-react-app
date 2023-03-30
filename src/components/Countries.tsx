@@ -1,23 +1,17 @@
-interface Countries {
+import Country from "./Country"
+
+interface ICountriesProps {
     listCountries: any
 }
 
 
-const Countries: React.FC<Countries> = ({listCountries}) => {
-
-    const isEmpty = listCountries.length === 0
-
-    if(isEmpty) {
-    
-        
-    }
-
+const Countries: React.FC<ICountriesProps> = ({listCountries}) => {
     return (
-        <div>
-            {listCountries.map((country: any) => {
-                return <p key={country.cca2}> {country.name.common}</p>
+        <>            {listCountries.map((country: any) => {
+                return <Country country={country}/>
             })}
-        </div>    
+        </>    
     )
-
 }
+
+export default Countries
