@@ -6,6 +6,4 @@ function formatNumber(value: string): string {
     return `${roundedNumber.toLocaleString()}${scaleSuffix} people`;
   }
   
-  console.log(formatNumber("212559409 people")); // saída: "212.6 million people"
-
   export default formatNumber
