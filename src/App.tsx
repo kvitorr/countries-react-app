@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import Countries from './components/Countries'
+import CountryDetails from './components/CountryDetails'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('')
