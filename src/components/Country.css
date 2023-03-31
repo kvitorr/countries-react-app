@@ -1,7 +1,6 @@
 .countryBox {
     background-color: #ffffff;
     padding: 1rem;
-    height: 250px;
     width: 300px;
     border-radius: 0.7rem;
     display: flex;
@@ -16,8 +15,9 @@
 
 .countryBox:hover {
     transform: scale(1.05);
-    z-index: 1; /* opcional, se necessário */
+    z-index: 0; /* opcional, se necessário */
 }
+
 
 .countryImage {
     width: 100%;
