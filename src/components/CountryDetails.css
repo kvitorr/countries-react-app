@@ -2,26 +2,27 @@
     background-color: rgba(255, 255, 255, 0.733);
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
-
     display: flex;
-    padding: 5rem;
-    z-index: 2; /* opcional, se necessário */
+    z-index: 2; 
+    padding: 2rem;
 }
 
 .countryDetailBox {
     background-color: #ffffff;
+    max-height: 90%;
     padding: 1rem;
     border-radius: 0.7rem;
-    width: 400px;
+    max-width: 400px;
     box-shadow: 0px 0px 38px -11px rgba(0,0,0,0.75);
     margin: 0 auto;
     
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 .countryDetailHeader {
@@ -65,5 +66,5 @@
 
 .countryDetailSections p{
     font-size: 0.8rem;
-    cursor: pointer;
+    font-weight: 700;
 }
