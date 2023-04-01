@@ -1,11 +1,11 @@
 import "./CountryDetails.css"
 import { IoMdClose } from 'react-icons/io'
+import CountryGeneral from "./CountryGeneral"
 
 interface ICountryDetailsProps {
     country: any,
     setShowDetails: any
 }
-
 
 const CountryDetails: React.FC<ICountryDetailsProps> = ({country, setShowDetails}) => {
     return (
@@ -22,9 +22,10 @@ const CountryDetails: React.FC<ICountryDetailsProps> = ({country, setShowDetails
                 </div>
 
                 <div className="countryDetailSections">
-                    <p className="CountryDetailGeneral">General</p>
-                    <p className="CountryDetailWeather">Weather</p>
+                    <p className="countryDetailGeneral">General</p>
                 </div>
+
+                <CountryGeneral country={country}/>
 
             </div>
         </div>
