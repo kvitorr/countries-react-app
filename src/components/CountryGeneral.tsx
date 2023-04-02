@@ -1,6 +1,7 @@
 import './CountryGeneral.css'
 
 import formatNumber from "../utils/formatString"
+import formatArea from '../utils/formatArea'
 
 interface ICountryGeneralProps {
     country: any
@@ -31,8 +32,21 @@ const CountryGeneral: React.FC<ICountryGeneralProps> = ({country}) => {
                     <td className='tableContent'>{country.continents.reduce((accumulator: string, currentValue: string) => accumulator + ' ' + currentValue)}</td>
                 </tr>
                 <tr>
+                    <td className='tableTitle'>Timezones:</td>
+                    <td className='tableContent'>{country.timezones.reduce((accumulator: string, currentValue: string) => accumulator + ' ' + currentValue)}</td>
+                </tr>
+
+                <tr>
                     <td className='tableTitle'>Area:</td>
-                    <td className='tableContent'>{country.area}</td>
+                    <td className='tableContent'>{country.area} km²</td>
+                </tr>
+                <tr>
+                    <td className='tableTitle'>Latitude:</td>
+                    <td className='tableContent'>{country.latlng[0]}</td>
+                </tr>
+                <tr>
+                    <td className='tableTitle'>Longitude:</td>
+                    <td className='tableContent'>{country.latlng[1]}</td>
                 </tr>
             </table>
 
