@@ -3,6 +3,8 @@ import './App.css'
 import axios from 'axios'
 import Countries from './components/Countries'
 import CountryDetails from './components/CountryDetails'
+import Filter from './components/Filter'
+
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -27,14 +29,15 @@ function App() {
   return (
   <>
     <main className='main'>
-      <h2>What country will you explore first?</h2>
-      <div className='searchBox'>
-        <input placeholder='Search here...' className='searchInput' value={searchTerm} onChange={handleSearchTermOnChange} />
+      <div className='searcher'>
+        <h2>What country will you explore first?</h2>
+        <Filter searchTerm={searchTerm} handleSearchTermOnChange={handleSearchTermOnChange}/>
       </div>
-    </main>
+    
     <div className='countriesFounded'>
       <Countries listCountries={listCountries}/>
     </div>
+    </main>
   </>
   )
 }

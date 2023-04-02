@@ -1,4 +1,7 @@
-.main {
+
+
+.searcher {
+  border-bottom: 1px solid black;
   width: 80%;
   margin: auto;
   display: flex;
@@ -6,7 +9,6 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  border-bottom: 1px solid black;
   text-align: center;
   line-height: 1.2;
 }

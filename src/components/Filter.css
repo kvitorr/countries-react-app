@@ -1,0 +1,14 @@
+.searchBox {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+}
